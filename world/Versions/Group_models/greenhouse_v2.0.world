@@ -1,3 +1,4 @@
+ <!-- Final Greenhouse model -->
 <sdf version='1.6'>
   <world name='default'>
     <light name='sun' type='directional'>
@@ -13,11 +14,6 @@
       </attenuation>
       <direction>-0.5 0.1 -0.9</direction>
     </light>
-    <actor name="actor">
-      <skin>
-        <filename>walk.dae</filename>
-      </skin>
-    </actor>
     <model name='ground_plane'>
       <static>1</static>
       <link name='link'>

@@ -1,3 +1,4 @@
+<!-- two rows of plants with a person walking through it --> 
 <sdf version='1.6'>
   <world name='default'>
     <light name='sun' type='directional'>
