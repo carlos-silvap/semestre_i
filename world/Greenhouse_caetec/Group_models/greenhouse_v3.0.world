@@ -1,0 +1,2651 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='greenhouse'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.05 0.05 0.05</scale>
+              <uri>model://greenhouse/meshes/greenhouse.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.03 0.03 0.03</scale>
+              <uri>model://greenhouse/meshes/greenhouse.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-26.1874 -28.9419 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>887 840000000</sim_time>
+      <real_time>1579 517320326</real_time>
+      <wall_time>1589908772 562245699</wall_time>
+      <iterations>322820</iterations>
+      <model name='Box_24x15W'>
+        <pose frame=''>-17.8284 -0.233565 -0.139926 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall'>
+          <pose frame=''>-17.8284 -0.233565 0.058574 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Box_24x15W_clone'>
+        <pose frame=''>-16.3027 -0.233565 -0.139926 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall'>
+          <pose frame=''>-16.3027 -0.233565 0.058574 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Box_24x15W_clone_0'>
+        <pose frame=''>-14.7891 -0.233565 -0.139926 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall'>
+          <pose frame=''>-14.7891 -0.233565 0.058574 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Box_24x15W_clone_1'>
+        <pose frame=''>-13.3102 -0.233565 -0.139926 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall'>
+          <pose frame=''>-13.3102 -0.233565 0.058574 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Box_24x15W_clone_2'>
+        <pose frame=''>-11.8212 -0.233565 -0.139926 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall'>
+          <pose frame=''>-11.8212 -0.233565 0.058574 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Box_24x15W_clone_3'>
+        <pose frame=''>-10.356 -0.233565 -0.139926 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall'>
+          <pose frame=''>-10.356 -0.233565 0.058574 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Ground_Soil'>
+        <pose frame=''>0.010866 -14.9998 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <model name='mud_box'>
+          <pose frame=''>-15.9904 -14.9997 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>-15.9904 -14.9997 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_0'>
+          <pose frame=''>-7.98852 -14.9997 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>-7.98852 -14.9997 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_1'>
+          <pose frame=''>0.011675 -15.0001 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>0.011675 -15.0001 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_2'>
+          <pose frame=''>8.01176 -15 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>8.01176 -15 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_3'>
+          <pose frame=''>16.01 -14.9995 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>16.01 -14.9995 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+      </model>
+      <model name='Ground_Soil_0'>
+        <pose frame=''>0.013259 -5.00278 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <model name='mud_box'>
+          <pose frame=''>-15.988 -5.00266 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>-15.988 -5.00266 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_0'>
+          <pose frame=''>-7.98613 -5.00269 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>-7.98613 -5.00269 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_1'>
+          <pose frame=''>0.014068 -5.00312 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>0.014068 -5.00312 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_2'>
+          <pose frame=''>8.01415 -5.00293 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>8.01415 -5.00293 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_3'>
+          <pose frame=''>16.0124 -5.00247 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>16.0124 -5.00247 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+      </model>
+      <model name='Ground_Soil_1'>
+        <pose frame=''>0.00506 4.98318 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <model name='mud_box'>
+          <pose frame=''>-15.9962 4.9833 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>-15.9962 4.9833 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_0'>
+          <pose frame=''>-7.99433 4.98327 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>-7.99433 4.98327 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_1'>
+          <pose frame=''>0.005869 4.98284 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>0.005869 4.98284 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_2'>
+          <pose frame=''>8.00595 4.98304 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>8.00595 4.98304 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_3'>
+          <pose frame=''>16.0042 4.9835 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>16.0042 4.9835 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+      </model>
+      <model name='Ground_Soil_2'>
+        <pose frame=''>0.009574 14.9849 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <model name='mud_box'>
+          <pose frame=''>-15.9917 14.985 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>-15.9917 14.985 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_0'>
+          <pose frame=''>-7.98982 14.985 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>-7.98982 14.985 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_1'>
+          <pose frame=''>0.010383 14.9845 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>0.010383 14.9845 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_2'>
+          <pose frame=''>8.01046 14.9847 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>8.01046 14.9847 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+        <model name='mud_box_3'>
+          <pose frame=''>16.0087 14.9852 0 0 -0 0</pose>
+          <scale>1 1 1</scale>
+          <link name='link'>
+            <pose frame=''>16.0087 14.9852 0 0 -0 0</pose>
+            <velocity>0 0 0 0 -0 0</velocity>
+            <acceleration>0 0 0 0 -0 0</acceleration>
+            <wrench>0 0 0 0 -0 0</wrench>
+          </link>
+        </model>
+      </model>
+      <model name='greenhouse'>
+        <pose frame=''>-24.6631 -23.579 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-24.6631 -23.579 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-12.093 -20.29 24.1635 -0 1.27164 1.56584</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='Box_24x15W'>
+      <link name='Wall'>
+        <pose frame=''>0 0 0.1985 0 -0 0</pose>
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>0.1022</ixx>
+            <iyy>0.2197</iyy>
+            <izz>0.1905</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='Wall_Collision'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_Visual'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <pose frame=''>-17.8616 -1.55577 0 0 -0 0</pose>
+    </model>
+    <model name='Box_24x15W_clone'>
+      <link name='Wall'>
+        <pose frame=''>0 0 0.1985 0 -0 0</pose>
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>0.1022</ixx>
+            <iyy>0.2197</iyy>
+            <izz>0.1905</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='Wall_Collision'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_Visual'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <pose frame=''>-16.393 -0.64224 -0.139926 0 -0 0</pose>
+    </model>
+    <model name='Box_24x15W_clone_0'>
+      <link name='Wall'>
+        <pose frame=''>0 0 0.1985 0 -0 0</pose>
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>0.1022</ixx>
+            <iyy>0.2197</iyy>
+            <izz>0.1905</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='Wall_Collision'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_Visual'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <pose frame=''>-14.889 -1.34099 -0.139926 0 -0 0</pose>
+    </model>
+    <model name='Box_24x15W_clone_1'>
+      <link name='Wall'>
+        <pose frame=''>0 0 0.1985 0 -0 0</pose>
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>0.1022</ixx>
+            <iyy>0.2197</iyy>
+            <izz>0.1905</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='Wall_Collision'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_Visual'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <pose frame=''>-13.4434 -1.1701 -0.139926 0 -0 0</pose>
+    </model>
+    <model name='Box_24x15W_clone_2'>
+      <link name='Wall'>
+        <pose frame=''>0 0 0.1985 0 -0 0</pose>
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>0.1022</ixx>
+            <iyy>0.2197</iyy>
+            <izz>0.1905</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='Wall_Collision'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_Visual'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <pose frame=''>-11.89 -0.610463 -0.139926 0 -0 0</pose>
+    </model>
+    <model name='Box_24x15W_clone_3'>
+      <link name='Wall'>
+        <pose frame=''>0 0 0.1985 0 -0 0</pose>
+        <inertial>
+          <mass>5</mass>
+          <inertia>
+            <ixx>0.1022</ixx>
+            <iyy>0.2197</iyy>
+            <izz>0.1905</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name='Wall_Collision'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_Visual'>
+          <geometry>
+            <box>
+              <size>0.470639 27.6098 0.091294</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+      <pose frame=''>-10.4049 -0.250871 -0.139926 0 -0 0</pose>
+    </model>
+    <model name='Ground_Soil'>
+      <model name='mud_box'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>-16.0013 0.000118 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_0'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>-7.99939 9.1e-05 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_1'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>0.000809 -0.000342 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_2'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>8.00089 -0.000148 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_3'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>15.9991 0.000313 0 0 -0 0</pose>
+      </model>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>-0.462062 -13.586 0 0 -0 0</pose>
+    </model>
+    <model name='Ground_Soil_0'>
+      <model name='mud_box'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>-16.0013 0.000118 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_0'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>-7.99939 9.1e-05 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_1'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>0.000809 -0.000342 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_2'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>8.00089 -0.000148 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_3'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>15.9991 0.000313 0 0 -0 0</pose>
+      </model>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>-0.007081 -5.06691 0 0 -0 0</pose>
+    </model>
+    <model name='Ground_Soil_1'>
+      <model name='mud_box'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>-16.0013 0.000118 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_0'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>-7.99939 9.1e-05 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_1'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>0.000809 -0.000342 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_2'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>8.00089 -0.000148 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_3'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>15.9991 0.000313 0 0 -0 0</pose>
+      </model>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>-0.032136 4.86895 0 0 -0 0</pose>
+    </model>
+    <model name='Ground_Soil_2'>
+      <model name='mud_box'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>-16.0013 0.000118 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_0'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>-7.99939 9.1e-05 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_1'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>0.000809 -0.000342 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_2'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>8.00089 -0.000148 0 0 -0 0</pose>
+      </model>
+      <model name='mud_box_3'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <geometry>
+              <box>
+                <size>8 10 0.02</size>
+              </box>
+            </geometry>
+            <max_contacts>10</max_contacts>
+            <surface>
+              <contact>
+                <ode/>
+              </contact>
+              <bounce/>
+              <friction>
+                <torsional>
+                  <ode/>
+                </torsional>
+                <ode/>
+              </friction>
+            </surface>
+          </collision>
+          <visual name='visual_1'>
+            <pose frame=''>-2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_2'>
+            <pose frame=''>2 2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_3'>
+            <pose frame=''>2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <visual name='visual_4'>
+            <pose frame=''>-2 -2.5 0 0 -0 0</pose>
+            <cast_shadows>0</cast_shadows>
+            <geometry>
+              <box>
+                <size>4 5 0.02</size>
+              </box>
+            </geometry>
+            <material>
+              <script>
+                <uri>model://mud_box/materials/scripts</uri>
+                <uri>model://mud_box/materials/textures</uri>
+                <name>vrc/mud</name>
+              </script>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <pose frame=''>15.9991 0.000313 0 0 -0 0</pose>
+      </model>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>-0.030825 14.6488 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>
