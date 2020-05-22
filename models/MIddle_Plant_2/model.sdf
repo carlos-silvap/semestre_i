@@ -1,0 +1,1020 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='MIddle_Plant_2'>
+    <model name='MIddle_Plant_1'>
+      <model name='tomato_plant_big'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.144318 -0.693607 -0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_0'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.11784 -0.519827 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_1'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.073755 -0.247584 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_10'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.037052 1.07094 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_2'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.076926 -0.131165 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_3'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.093714 -0.038386 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_4'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.103117 0.184356 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_5'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.074883 0.301479 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_6'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.096921 0.484007 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_7'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.107491 0.653976 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_8'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.07985 0.768549 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_big_9'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.6 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 7e-06</scale>
+                <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.098361 0.890852 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_medium'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 6e-06</scale>
+                <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.056913 -1.05328 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_medium_0'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 6e-06</scale>
+                <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.092719 -0.905729 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_medium_1'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 6e-06</scale>
+                <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.108962 -0.829637 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_medium_2'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 6e-06</scale>
+                <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.071216 -0.652507 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_medium_3'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 6e-06</scale>
+                <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.047335 -0.423046 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_medium_4'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 6e-06</scale>
+                <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.081012 -0.320324 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_medium_5'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 6e-06</scale>
+                <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.07452 0.095988 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_medium_6'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 6e-06</scale>
+                <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>0.101424 0.395443 0 0 -0 0</pose>
+      </model>
+      <model name='tomato_plant_small'>
+        <static>1</static>
+        <link name='link'>
+          <collision name='collision'>
+            <pose frame=''>0 0 0 1.5708 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.45 0.5</scale>
+                <uri>model://stick/meshes/stick.dae</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+            <pose frame=''>0 0 0 0 -0 0</pose>
+            <geometry>
+              <mesh>
+                <scale>5e-06 5e-06 5e-06</scale>
+                <uri>model://tomato_plant_small/meshes/tomato-plant.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+        <pose frame=''>-0.060351 0.969512 0 0 -0 0</pose>
+      </model>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>0.763113 0.028917 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.613724 -2.69399 -0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.640202 -2.52021 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.831797 -2.24797 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_10'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.795094 -0.929446 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.681116 -2.13155 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_3'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.851755 -2.03877 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_4'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.861158 -1.81603 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_5'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.683158 -1.69891 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_6'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.66112 -1.51638 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_7'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.865532 -1.34641 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_8'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.678192 -1.23184 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_big_9'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.6 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 7e-06</scale>
+              <uri>model://tomato_plant_big/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.856402 -1.10953 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_medium'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.5 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 6e-06</scale>
+              <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.814955 -3.05367 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_medium_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.5 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 6e-06</scale>
+              <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.665322 -2.90611 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_medium_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.5 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 6e-06</scale>
+              <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.867004 -2.83002 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_medium_2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.5 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 6e-06</scale>
+              <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.829257 -2.65289 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_medium_3'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.5 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 6e-06</scale>
+              <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.805376 -2.42343 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_medium_4'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.5 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 6e-06</scale>
+              <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.67703 -2.32071 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_medium_5'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.5 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 6e-06</scale>
+              <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.683522 -1.9044 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_medium_6'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.5 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 6e-06</scale>
+              <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.859466 -1.60494 0 0 -0 0</pose>
+    </model>
+    <model name='tomato_plant_small'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.5 0.45 0.5</scale>
+              <uri>model://stick/meshes/stick.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>5e-06 5e-06 5e-06</scale>
+              <uri>model://tomato_plant_small/meshes/tomato-plant.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>0.697691 -1.03087 0 0 -0 0</pose>
+    </model>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

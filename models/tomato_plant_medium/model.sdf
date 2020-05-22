@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="tomato_plant_medium">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <pose>0 0 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://stick/meshes/stick.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.000005 0.000005 0.0000060</scale>
+            <uri>model://tomato_plant_medium/meshes/tomato-plant.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+
