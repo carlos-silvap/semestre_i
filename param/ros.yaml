@@ -2,7 +2,7 @@
 # Defines topics services and frames for all modules
 
 ### TF frames #############################################
-laser_frame: base_laser_link
+laser_frame: lidar_Link
 robot_frame: base_link
 odometry_frame: odom
 offset_frame: offset
