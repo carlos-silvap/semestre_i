@@ -1,0 +1,50 @@
+<!-- This launch file is intended to be used with the two_wheels_description package
+			To start a simulation you must first execute:
+
+-->
+
+<launch>
+	<!-- Some general parameters -->
+	<param name="use_sim_time" value="true" />
+	<rosparam file="$(find semestre_i)/param/ros.yaml"/>
+
+	<!-- Add a necessary transformations to link odom and base_link frames -->
+    <node pkg="tf" type="static_transform_publisher" name="baselinksimulated_to_baselink" args="0 0 0 4.71239 0 0 base_footprint base_link 50"/>
+
+
+
+	<!-- Start the Operator to control the simulated robot -->
+	<node name="Operator" pkg="nav2d_operator" type="operator" >
+		<remap from="scan" to="base_scan"/>
+		<rosparam file="$(find semestre_i)/param/operator.yaml"/>
+		<rosparam file="$(find semestre_i)/param/costmap.yaml" ns="map" />
+	</node>
+
+	<!-- Load the environment map in the map_server -->
+	<node name="MapServer" pkg="map_server" type="map_server" args="$(find semestre_i)/world/map.yaml" />
+
+	<!-- Start particle filter to track the robot's position -->
+	<node name="SelfLocalizer" pkg="nav2d_localizer" type="localizer">
+		<remap from="scan" to="base_scan"/>
+		<param name="min_particles" type="int" value="400"/>
+		<param name="max_particles" type="int" value="3500"/>
+		<param name="min_translation" value="0.005"/>
+		<param name="min_rotation" value="0.01"/>
+	</node>
+
+	<!-- Start the Navigator to move the robot autonomously -->
+	<node name="Navigator" pkg="nav2d_navigator" type="navigator">
+		<rosparam file="$(find semestre_i)/param/navigator.yaml"/>
+	</node>
+
+    <node name="GetMap" pkg="nav2d_navigator" type="get_map_client" />
+    <node name="Explore" pkg="nav2d_navigator" type="explore_client" />
+    <node name="SetGoal" pkg="nav2d_navigator" type="set_goal_client" />
+
+	<!-- Start the teleop_semiauto.py node-->
+	<node name="teleop_semiauto" pkg="two_wheels_navigation" type="teleop_semiauto.py" output="screen" respawn="true"/>
+
+	<!-- RVIZ to view the visualization -->
+	<node name="RVIZ" pkg="rviz" type="rviz" args=" -d $(find semestre_i)/param/tutorial2.rviz" />
+    
+</launch>
