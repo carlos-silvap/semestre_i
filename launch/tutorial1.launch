@@ -3,7 +3,7 @@
 	<!-- Some general parameters -->
 	<param name="use_sim_time" value="true" />
 	<rosparam file="$(find semestre_i)/param/ros.yaml"/>
-    <node pkg="tf" type="static_transform_publisher" name="baselinksimulated_to_baselink" args="0 0 0 0 0 0 base_link_simulated base_link 100"/> 
+    <node pkg="tf" type="static_transform_publisher" name="baselinksimulated_to_baselink" args="0 0 0 0 0 0 base_footprint base_link 50"/> 
     
 	<!-- Start the Operator to control the simulated robot -->
 	<node name="Operator" pkg="nav2d_operator" type="operator" >
