@@ -1,0 +1,6 @@
+free_thresh: 0.196
+image: walls_map.pgm
+negate: 0
+occupied_thresh: 0.65
+origin: [-9.525000999999996, -7.675000999999995, 0.0]
+resolution: 0.05

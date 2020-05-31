@@ -44,10 +44,10 @@ class BallTracker():
         # define the lower and upper boundaries of the "green"
         # ball in the HSV color space, then initialize the
         # list of tracked points
-        #self.greenLower = (112, 197, 26)
-        #self.greenUpper = (137, 243, 40)
-        self.greenLower = (5, 50, 50)
-        self.greenUpper = (15, 255, 255)
+        self.greenLower = (112, 197, 26)
+        self.greenUpper = (137, 243, 40)
+        #self.greenLower = (5, 50, 50)
+        #self.greenUpper = (15, 255, 255)
         self.pts = deque(maxlen=self.args["buffer"])
 
 
