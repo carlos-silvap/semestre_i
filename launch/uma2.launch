@@ -1,0 +1,21 @@
+
+<launch>
+  <arg name="x" default="-13.889890"/>
+  <arg name="y" default="-16.744947"/>
+  <arg name="z" default="0.486716"/>
+  <arg name="yaw" default="0.0000001"/>
+  <arg name="use_sim_time" default="true"/> 
+  <param name="robot_description" command="cat '$(find uma_grover)/urdf/uma_grovermodificado.urdf'" />
+  
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+     <remap from="joint_states" to="/uma_robot/joint_states"/>
+  </node>
+  
+  <node
+    name="spawn_model" pkg="gazebo_ros" type="spawn_model" output="screen"
+    args="-file $(find uma_grover)/urdf/uma_grovermodificado.urdf -urdf -model uma_grover -x $(arg x) -y $(arg y) -z $(arg z) -Y $(arg yaw)"/>
+  <node
+    name="fake_joint_calibration" pkg="rostopic" type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+ 
+</launch>

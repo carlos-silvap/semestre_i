@@ -1,17 +1,88 @@
-<?xml version="1.0" ?>
 <sdf version="1.6">
   <world name="default">
     <include>
       <uri>model://sun</uri>
     </include>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
     <actor name="actor">
       <skin>
         <filename>walk.dae</filename>
       </skin>
-      <animation name="animation">
-        <filename>moonwalk.dae</filename>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
       </animation>
+      <script>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>-16.25 -15.5 0 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>20</time>
+            <pose>-16.25 0 0 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>35</time>
+            <pose>-12.25 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>40</time>
+            <pose>-12.25 -0.5 0 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>60</time>
+            <pose>-12.25 -15.5 0 0 0 -1.57</pose>
+          </waypoint>
+        </trajectory>
+      </script>
     </actor>
   </world>
 </sdf>
-

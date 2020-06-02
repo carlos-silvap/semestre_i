@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+""" This program publishes a given integer to a ROS topic
+    published topic:
+        /number_topic
+"""
 # import ROS stuff
 import rospy
 from std_msgs.msg import Int32
@@ -29,7 +33,12 @@ class BallTracker():
         self.center_ros = Point()
         self.radius_ros=0
 
-       
+        ap = argparse.ArgumentParser()
+        ap.add_argument("-v", "--video",
+            help="path to the (optional) video file")
+        ap.add_argument("-b", "--buffer", type=int, default=64,
+            help="max buffer size")
+        self.args = vars(ap.parse_args())
 
 
         # define the lower and upper boundaries of the "green"
@@ -37,7 +46,9 @@ class BallTracker():
         # list of tracked points
         self.greenLower = (112, 197, 26)
         self.greenUpper = (137, 243, 40)
-       
+        #self.greenLower = (5, 50, 50)
+        #self.greenUpper = (15, 255, 255)
+        self.pts = deque(maxlen=self.args["buffer"])
 
 
         #To adjust the execution rate of the while Loop
@@ -104,7 +115,22 @@ class BallTracker():
                 cv2.circle(self.frame, (int(x), int(y)), int(radius),
                     (0, 255, 255), 2)
                 cv2.circle(self.frame, center, 5, (0, 0, 255), -1)
-      
+
+        # update the points queue
+        self.pts.appendleft(center)
+
+        # loop over the set of tracked points
+        for i in range(1, len(self.pts)):
+            # if either of the tracked points are None, ignore
+            # them
+            if self.pts[i - 1] is None or self.pts[i] is None:
+                continue
+
+            # otherwise, compute the thickness of the line and
+            # draw the connecting lines
+            thickness = int(np.sqrt(self.args["buffer"] / float(i + 1)) * 2.5)
+            cv2.line(self.frame, self.pts[i - 1], self.pts[i], (0, 0, 255), thickness)
+
         # show the frame to our screen
         cv2.imshow("Frame", self.frame)
         key = cv2.waitKey(1) & 0xFF
@@ -112,5 +138,3 @@ class BallTracker():
 
 if __name__ == '__main__':
     BallTracker()
-    
-    

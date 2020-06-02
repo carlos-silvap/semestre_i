@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import rospy
+import time
 from std_msgs.msg import Int32
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import Point
@@ -15,7 +16,8 @@ class ColorVelControl():
         rospy.Subscriber("center", Point, self.center_cb) 
         
         ####  PUBLISHERS ###
-        self.cmd_vel_pub=rospy.Publisher("cmd_vel", Twist, queue_size = 1)
+        #self.cmd_vel_pub=rospy.Publisher("cmd_vel", Twist, queue_size = 1)
+        self.cmd_vel_pub = rospy.Publisher('tracker_follow', Twist, queue_size=1)
         
         ### CONSTANTS ###
         self.robot_vel = Twist()
@@ -24,48 +26,74 @@ class ColorVelControl():
         r = rospy.Rate(10) #10 Hz       
         self.prev=0
         self.count=0
+        self.cb=0
+        self.flag = False
+        self.time = time.time()
         
         ### INIT NODE ####  
         while not rospy.is_shutdown():
             print (self.robot_vel)
-            self.cmd_vel_pub.publish(self.robot_vel)
+            
+            if self.time-self.cb < 2: 
+                print self.robot_vel
+                self.cmd_vel_pub.publish(self.robot_vel)
+            
             r.sleep()
             
     def radius_cb(self, msg):  
-        klinear = 300
+        self.cb = time.time() 
+        klinear = 30
         self.rad = msg.data
-        x=0
-        
-        if (self.rad > 150) :
-            self.robot_vel.angular.z=0 
             
-        elif (self.rad==self.prev and self.count>10):
-            self.robot_vel.linear.x=0
-            self.robot_vel.angular.z=0 
+     
+        if ( 175 > self.rad > 50):
+            self.robot_vel.linear.x = 0
+            print("cerca")
+            if (self.rad!=self.prev):
+                self.count=0 
+                 
+        elif (self.rad > 175):
+            self.robot_vel.linear.x = -0.1
+            print("muy cerca")
+            if (self.rad!=self.prev):
+                self.count=0  
         
-        else:
-            self.robot_vel.angular.z = klinear / (self.rad+0.00001)
-            self.cont=0
-        self.prev=self.rad
-        self.count=self.count+1
+        else:   
+            self.robot_vel.linear.x = klinear / (self.rad + 0.00001)
+            
+            if (self.rad!=self.prev):
+                self.count=0 
+        if (self.rad==self.prev and self.flag == True):
+            self.count=self.count+1 
+            if(self.count>10):
+                self.robot_vel.linear.x=0
+        
+      
+        self.prev = self.rad               
         print (self.count)
-        pass
+      
         
         
     def center_cb(self, msg):  
-        kangular = 0.009
-        self.x0 = 300
+        kangular = 0.01
         self.center_x = msg.x
-        self.xdiff =self.x0-self.center_x
-        self.robot_vel.linear.x = kangular * self.xdiff
-        print("Msg.x", msg.x)
-        print("Diff", self.xdiff)
+        self.x0 = 300
+        self.xdiff = self.x0 - self.center_x
+       
+        self.robot_vel.angular.z = kangular*self.xdiff
+        
+        if (self.robot_vel.angular.z < 0.5):
+            self.flag = True
+        else:
+            self.flag = False
+        
         
        
     def cleanup(self): 
-       self.robot_vel.angular.z = 0
-       self.robot_vel.linear.x = 0
-       pass
+        print('apagando motor')
+        self.robot_vel.angular.z = 0
+        self.robot_vel.linear.x = 0
+      
        
         
 ############################### MAIN PROGRAM ####################################  
